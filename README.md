@@ -235,7 +235,7 @@
             </div>
 
             <div id="handed-over-fields" class="form-group hidden">
-                <label for="security-id">Security ID Number:</label>
+                <label for="security-id">Security & Customer ID Number:</label>
                 <input type="text" id="security-id" name="security-id">
             </div>
 
@@ -246,7 +246,32 @@
 
             <div class="form-group">
                 <label for="csa-name">CSA Name:</label>
-                <input type="text" id="csa-name" name="csa-name" class="medium-input" required>
+                <select id="csa-name" name="csa-name" class="medium-input" required>
+                    <option value="" disabled selected>Select a CSA Name</option>
+                    <option value="Marie">Marie</option>
+                    <option value="Varun">Varun</option>
+                    <option value="Allaine">Allaine</option>
+                    <option value="Kaye">Kaye</option>
+                    <option value="Iswary">Iswary</option>
+                    <option value="Aqil">Aqil</option>
+                    <option value="Kim">Kim</option>
+                    <option value="Aahaan">Aahaan</option>
+                    <option value="Wasan">Wasan</option>
+                    <option value="Flora">Flora</option>
+                    <option value="Abdelrahman">Abdelrahman</option>
+                    <option value="April">April</option>
+                    <option value="Amine">Amine</option>
+                    <option value="Sadaf">Sadaf</option>
+                    <option value="Saber">Saber</option>
+                    <option value="Salma">Salma</option>
+                    <option value="Alameen">Alameen</option>
+                    <option value="Anjum">Anjum</option>
+                    <option value="Nourhan">Nourhan</option>
+                    <option value="Yasmine">Yasmine</option>
+                    <option value="Afrith">Afrith</option>
+                    <option value="Alnoor">Alnoor</option>
+                    <option value="Teamleader">Teamleader</option>
+                </select>
             </div>
 
             <button type="submit">Submit</button>
