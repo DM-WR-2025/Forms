@@ -1,4 +1,3 @@
-# Dragon Mart
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -119,6 +118,44 @@
             font-size: 14px;
             color: #777;
             margin-top: 40px;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            /* Mobile layout: Keep the same layout as desktop but adjust styles */
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            /* Make form inputs and selects take full width */
+            .medium-input, select {
+                width: 100%;
+            }
+
+            .wheelchair-select select {
+                width: 100%;
+            }
+
+            button {
+                width: 100%;
+                padding: 12px;
+                font-size: 16px;
+            }
+
+            /* Adjust margins for mobile */
+            .form-group {
+                margin-bottom: 15px;
+            }
+
+            /* Change font size for better readability */
+            label {
+                font-size: 14px;
+            }
         }
     </style>
     <script>
