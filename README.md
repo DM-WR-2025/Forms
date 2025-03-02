@@ -1,4 +1,4 @@
-# Dragon Mart 1 & 2
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -119,40 +119,6 @@
             color: #777;
             margin-top: 40px;
         }
-
-        /* Mobile responsiveness */
-        @media (max-width: 768px) {
-            .container {
-                width: 90%;
-                padding: 15px;
-            }
-
-            h2 {
-                font-size: 20px;
-            }
-
-            .medium-input, select {
-                width: 100%;
-            }
-
-            .wheelchair-select select {
-                width: 100%;
-            }
-
-            button {
-                width: 100%;
-                padding: 12px;
-                font-size: 16px;
-            }
-
-            .form-group {
-                margin-bottom: 15px;
-            }
-
-            label {
-                font-size: 14px;
-            }
-        }
     </style>
     <script>
         function showWheelchairOptions() {
@@ -201,104 +167,93 @@
             }
         }
 
-        function updatePhoneCode() {
-            var nationality = document.getElementById("nationality").value;
-            var phoneField = document.getElementById("phone");
-
-            var countryCodes = {
-                "Bahrain": "+973",
-                "Kuwait": "+965",
-                "Oman": "+968",
-                "Qatar": "+974",
-                "Saudi Arabia": "+966",
-                "United Arab Emirates": "+971",
-                "USA": "+1",
-                "Canada": "+1",
-                "India": "+91",
-                "Australia": "+61",
-                "United Kingdom": "+44",
-                "Germany": "+49",
-                "France": "+33",
-                "Japan": "+81",
-                "China": "+86",
-                "Brazil": "+55",
-                "South Africa": "+27",
-                "Russia": "+7",
-                "Mexico": "+52",
-                "Italy": "+39",
-                "Spain": "+34",
-                "Argentina": "+54",
-                "Egypt": "+20",
-                "Turkey": "+90",
-                "Pakistan": "+92",
-                "Singapore": "+65",
-                "New Zealand": "+64",
-                "Sudan": "+249"
-            };
-
-            if (nationality === "Other Country") {
-                phoneField.placeholder = "Enter country code and phone number";
-                phoneField.value = ""; // Clear the value
-            } else if (countryCodes[nationality]) {
-                phoneField.value = countryCodes[nationality]; // Pre-fill the country code
-                phoneField.placeholder = countryCodes[nationality] + " - Phone Number";
-            }
+        function confirmSubmission() {
+            alert("Form successfully submitted!");
+            return true;
         }
     </script>
 </head>
 <body>
     <div class="container">
         <h2>Wheelchair Registration Form</h2>
-        <form action="https://script.google.com/macros/s/AKfycbxVO23PuUc2S7DmmBdsJ5w2l-8aAfZOMPqw00iMJ4MHu7xnzgrrUuWE7MoAjV0WB43jJA/exec" method="POST" enctype="multipart/form-data" onsubmit="return confirmSubmission()">
+        <form action="https://script.google.com/macros/s/AKfycbxnPftPwSE9lp1wo9Gmj_YSlEDVtnt60SmkWyomki-olJfxDUCbsYe15-UPdbWcvty0LQ/exec" method="POST" enctype="multipart/form-data" onsubmit="return confirmSubmission()">
             
+            <!-- Customer Name First -->
             <div class="form-group">
                 <label for="customer-name">Customer Name:</label>
                 <input type="text" id="customer-name" name="customer-name" required class="medium-input">
             </div>
 
-            <!-- Nationality Dropdown -->
+            <!-- Nationality Dropdown Next with Full Country Names -->
             <div class="form-group">
                 <label for="nationality">Nationality:</label>
-                <select id="nationality" name="nationality" onchange="updatePhoneCode()" required class="medium-input">
-                    <option value="" disabled selected>Select a nationality</option>
-                    <option value="Bahrain">Bahrain</option>
-                    <option value="Kuwait">Kuwait</option>
-                    <option value="Oman">Oman</option>
-                    <option value="Qatar">Qatar</option>
-                    <option value="Saudi Arabia">Saudi Arabia</option>
-                    <option value="United Arab Emirates">United Arab Emirates</option>
-                    <option value="USA">USA</option>
+                <select id="nationality" name="nationality" required>
+                    <option value="" disabled selected>Select Nationality</option>
+                    <option value="United States">United States</option>
                     <option value="Canada">Canada</option>
+                    <option value="United Kingdom">United Kingdom</option>
                     <option value="India">India</option>
                     <option value="Australia">Australia</option>
-                    <option value="United Kingdom">United Kingdom</option>
                     <option value="Germany">Germany</option>
                     <option value="France">France</option>
-                    <option value="Japan">Japan</option>
-                    <option value="China">China</option>
-                    <option value="Brazil">Brazil</option>
-                    <option value="South Africa">South Africa</option>
-                    <option value="Russia">Russia</option>
-                    <option value="Mexico">Mexico</option>
-                    <option value="Italy">Italy</option>
                     <option value="Spain">Spain</option>
+                    <option value="Italy">Italy</option>
+                    <option value="China">China</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Russia">Russia</option>
+                    <option value="South Africa">South Africa</option>
                     <option value="Argentina">Argentina</option>
+                    <option value="Nigeria">Nigeria</option>
                     <option value="Egypt">Egypt</option>
-                    <option value="Turkey">Turkey</option>
-                    <option value="Pakistan">Pakistan</option>
+                    <option value="South Korea">South Korea</option>
                     <option value="Singapore">Singapore</option>
-                    <option value="New Zealand">New Zealand</option>
-                    <option value="Sudan">Sudan</option>
-                    <option value="Other Country">Other Country</option>
+                    <option value="Philippines">Philippines</option>
+                    <option value="Thailand">Thailand</option>
+                    <option value="Netherlands">Netherlands</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Finland">Finland</option>
+                    <option value="Norway">Norway</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="Poland">Poland</option>
+                    <option value="Greece">Greece</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="Saudi Arabia">Saudi Arabia</option>
+                    <option value="United Arab Emirates">United Arab Emirates</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="Vietnam">Vietnam</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Cambodia">Cambodia</option>
+                    <option value="Sri Lanka">Sri Lanka</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="Uganda">Uganda</option>
+                    <option value="Ethiopia">Ethiopia</option>
+                    <option value="Tanzania">Tanzania</option>
+                    <option value="Malawi">Malawi</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+                    <option value="Peru">Peru</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Venezuela">Venezuela</option>
+                    <option value="Cuba">Cuba</option>
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Suriname">Suriname</option>
+                    <option value="Guyana">Guyana</option>
                 </select>
             </div>
 
-            <!-- Phone Number Field -->
+            <!-- Phone Number Next -->
             <div class="form-group">
                 <label for="phone">Phone Number:</label>
                 <input type="tel" id="phone" name="phone" required class="medium-input">
             </div>
 
+            <!-- Desk Selection -->
             <div class="form-group">
                 <label for="desk">Select Desk:</label>
                 <select id="desk" name="desk" onchange="showWheelchairOptions()" required>
@@ -316,7 +271,6 @@
                 <select id="wheelchair-options" name="wheelchair" required></select>
             </div>
 
-            <!-- Security Deposit Section -->
             <div class="form-section">
                 <label>Security Deposit:</label>
                 <div class="radio-group">
@@ -342,7 +296,7 @@
             </div>
 
             <div id="handed-over-fields" class="form-group hidden">
-                <label for="security-id">Security & Customer ID Number:</label>
+                <label for="security-id">Security&Customer ID Number:</label>
                 <input type="text" id="security-id" name="security-id">
             </div>
 
@@ -351,10 +305,11 @@
                 <input type="date" id="last-date" name="last-date" class="medium-input" required>
             </div>
 
+            <!-- CSA Name Dropdown -->
             <div class="form-group">
                 <label for="csa-name">CSA Name:</label>
-                <select id="csa-name" name="csa-name" class="medium-input" required>
-                    <option value="" disabled selected>Select a CSA Name</option>
+                <select id="csa-name" name="csa-name" required>
+                    <option value="" disabled selected>Select CSA Name</option>
                     <option value="Marie">Marie</option>
                     <option value="Varun">Varun</option>
                     <option value="Allaine">Allaine</option>
@@ -368,24 +323,19 @@
                     <option value="Abdelrahman">Abdelrahman</option>
                     <option value="April">April</option>
                     <option value="Amine">Amine</option>
-                    <option value="Sadaf">Sadaf</option>
                     <option value="Saber">Saber</option>
-                    <option value="Salma">Salma</option>
+                    <option value="Sadaf">Sadaf</option>
                     <option value="Alameen">Alameen</option>
                     <option value="Anjum">Anjum</option>
                     <option value="Nourhan">Nourhan</option>
                     <option value="Yasmine">Yasmine</option>
                     <option value="Afrith">Afrith</option>
                     <option value="Alnoor">Alnoor</option>
-                    <option value="Teamleader">Team leader</option>
                 </select>
             </div>
 
             <button type="submit">Submit</button>
         </form>
-    </div>
-    <div class="footer">
-        <p>&copy; 2025 Wheelchair Registration System</p>
     </div>
 </body>
 </html>
