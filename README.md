@@ -118,59 +118,69 @@
             color: #777;
             margin-top: 40px;
         }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            .medium-input {
+                width: 100%;
+                display: block;
+            }
+
+            .form-group select, .form-group input {
+                width: 100%;
+            }
+
+            button {
+                width: 100%;
+            }
+
+            .form-group input[type="file"] {
+                width: 100%;
+            }
+
+            .wheelchair-select select {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 18px;
+            }
+
+            label {
+                font-size: 14px;
+            }
+
+            input, select, button {
+                font-size: 14px;
+            }
+
+            .medium-input {
+                width: 100%;
+            }
+
+            .form-group select, .form-group input {
+                font-size: 14px;
+            }
+
+            .radio-group label {
+                font-size: 14px;
+            }
+
+            button {
+                font-size: 16px;
+            }
+        }
     </style>
-    <script>
-        function showWheelchairOptions() {
-            var desk = document.getElementById("desk").value;
-            var wheelchairOptions = document.getElementById("wheelchair-options");
-            wheelchairOptions.innerHTML = ''; // Clear current wheelchair options
-            var startNumber = 0;
-
-            if (desk == 'BA') {
-                startNumber = 1;
-            } else if (desk == 'F') {
-                startNumber = 4;
-            } else if (desk == 'H') {
-                startNumber = 7;
-            } else if (desk == 'GA') {
-                startNumber = 10;
-            } else if (desk == 'GD') {
-                startNumber = 12;
-            }
-
-            var maxWheelchairs = (desk == 'GA' || desk == 'GD') ? 2 : 3;
-
-            for (var i = startNumber; i < startNumber + maxWheelchairs; i++) {
-                wheelchairOptions.innerHTML += `<option value="${i}">${i}</option>`;
-            }
-        }
-
-        function toggleSecurityDepositOptions() {
-            var depositType = document.querySelector('input[name="deposit-type"]:checked').value;
-            var idFields = document.getElementById("id-fields");
-            var cashFields = document.getElementById("cash-fields");
-            var handedOverFields = document.getElementById("handed-over-fields");
-
-            if (depositType == 'id-license') {
-                idFields.classList.remove('hidden');
-                cashFields.classList.add('hidden');
-                handedOverFields.classList.add('hidden');
-            } else if (depositType == 'cash') {
-                idFields.classList.add('hidden');
-                cashFields.classList.remove('hidden');
-                handedOverFields.classList.add('hidden');
-            } else if (depositType == 'security') {
-                idFields.classList.add('hidden');
-                cashFields.classList.add('hidden');
-                handedOverFields.classList.remove('hidden');
-            }
-        }
-
-        function confirmSubmission() {
-            alert("Form successfully submitted!");
-            return true;
-        }
-    </script>
 </head>
 <body>
     <div class="container">
