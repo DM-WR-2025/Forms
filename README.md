@@ -1,9 +1,12 @@
+<Dragon Mart1&2 >
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wheelchair Registration Form</title>
     <style>
+        /* Same styling as before */
+
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f4f7fa;
@@ -181,12 +184,56 @@
             }
         }
     </style>
+    <script>
+        function showWheelchairOptions() {
+            var desk = document.getElementById("desk").value;
+            var wheelchairSelect = document.getElementById("wheelchair-options");
+            wheelchairSelect.innerHTML = ""; // Clear current options
+
+            var wheelchairOptions = {
+                "BA": ["1", "2", "3"],
+                "F": ["4", "5", "6"],
+                "H": ["7", "8", "9"],
+                "GA": ["10", "11"],
+                "GD": ["12", "13"]
+            };
+
+            if (wheelchairOptions[desk]) {
+                wheelchairOptions[desk].forEach(function(option) {
+                    var optionElement = document.createElement("option");
+                    optionElement.value = option;
+                    optionElement.textContent = "Wheelchair " + option;
+                    wheelchairSelect.appendChild(optionElement);
+                });
+            }
+        }
+
+        function toggleSecurityDepositOptions() {
+            var selectedDeposit = document.querySelector('input[name="deposit-type"]:checked').value;
+            document.getElementById("id-fields").style.display = "none";
+            document.getElementById("cash-fields").style.display = "none";
+            document.getElementById("handed-over-fields").style.display = "none";
+
+            if (selectedDeposit === "id-license") {
+                document.getElementById("id-fields").style.display = "block";
+            } else if (selectedDeposit === "cash") {
+                document.getElementById("cash-fields").style.display = "block";
+            } else if (selectedDeposit === "security") {
+                document.getElementById("handed-over-fields").style.display = "block";
+            }
+        }
+
+        // Call the functions when the page is loaded to ensure that hidden fields are correctly initialized
+        window.onload = function() {
+            toggleSecurityDepositOptions();
+        };
+    </script>
 </head>
 <body>
     <div class="container">
         <h2>Wheelchair Registration Form</h2>
         <form action="https://script.google.com/macros/s/AKfycbxnPftPwSE9lp1wo9Gmj_YSlEDVtnt60SmkWyomki-olJfxDUCbsYe15-UPdbWcvty0LQ/exec" method="POST" enctype="multipart/form-data" onsubmit="return confirmSubmission()">
-            
+           
             <!-- Customer Name First -->
             <div class="form-group">
                 <label for="customer-name">Customer Name:</label>
@@ -198,61 +245,61 @@
                 <label for="nationality">Nationality:</label>
                 <select id="nationality" name="nationality" required>
                     <option value="" disabled selected>Select Nationality</option>
-                    <option value="United States">United States</option>
-                    <option value="Canada">Canada</option>
-                    <option value="United Kingdom">United Kingdom</option>
-                    <option value="India">India</option>
-                    <option value="Australia">Australia</option>
-                    <option value="Germany">Germany</option>
-                    <option value="France">France</option>
-                    <option value="Spain">Spain</option>
-                    <option value="Italy">Italy</option>
-                    <option value="China">China</option>
-                    <option value="Japan">Japan</option>
-                    <option value="Brazil">Brazil</option>
-                    <option value="Mexico">Mexico</option>
-                    <option value="Russia">Russia</option>
-                    <option value="South Africa">South Africa</option>
-                    <option value="Argentina">Argentina</option>
-                    <option value="Nigeria">Nigeria</option>
-                    <option value="Egypt">Egypt</option>
-                    <option value="South Korea">South Korea</option>
-                    <option value="Singapore">Singapore</option>
-                    <option value="Philippines">Philippines</option>
-                    <option value="Thailand">Thailand</option>
-                    <option value="Netherlands">Netherlands</option>
-                    <option value="Sweden">Sweden</option>
-                    <option value="Finland">Finland</option>
-                    <option value="Norway">Norway</option>
-                    <option value="Denmark">Denmark</option>
-                    <option value="Poland">Poland</option>
-                    <option value="Greece">Greece</option>
-                    <option value="Turkey">Turkey</option>
-                    <option value="Saudi Arabia">Saudi Arabia</option>
-                    <option value="United Arab Emirates">United Arab Emirates</option>
-                    <option value="Malaysia">Malaysia</option>
-                    <option value="Indonesia">Indonesia</option>
-                    <option value="Vietnam">Vietnam</option>
-                    <option value="Pakistan">Pakistan</option>
-                    <option value="Bangladesh">Bangladesh</option>
-                    <option value="Cambodia">Cambodia</option>
-                    <option value="Sri Lanka">Sri Lanka</option>
-                    <option value="Kenya">Kenya</option>
-                    <option value="Uganda">Uganda</option>
-                    <option value="Ethiopia">Ethiopia</option>
-                    <option value="Tanzania">Tanzania</option>
-                    <option value="Malawi">Malawi</option>
-                    <option value="Zimbabwe">Zimbabwe</option>
-                    <option value="Peru">Peru</option>
-                    <option value="Chile">Chile</option>
-                    <option value="Colombia">Colombia</option>
-                    <option value="Venezuela">Venezuela</option>
-                    <option value="Cuba">Cuba</option>
-                    <option value="Ecuador">Ecuador</option>
-                    <option value="Paraguay">Paraguay</option>
-                    <option value="Bolivia">Bolivia</option>
-                    <option value="Suriname">Suriname</option>
-                    <option value="Guyana">Guyana</option>
+                    <option value="United States (+1)">United States (+1)</option>
+                    <option value="Canada (+1)">Canada (+1)</option>
+                    <option value="United Kingdom (+44)">United Kingdom (+44)</option>
+                    <option value="India (+91)">India (+91)</option>
+                    <option value="Australia (+61)">Australia (+61)</option>
+                    <option value="Germany (+49)">Germany (+49)</option>
+                    <option value="France (+33)">France (+33)</option>
+                    <option value="Spain (+34)">Spain (+34)</option>
+                    <option value="Italy (+39)">Italy (+39)</option>
+                    <option value="China (+86)">China (+86)</option>
+                    <option value="Japan (+81)">Japan (+81)</option>
+                    <option value="Brazil (+55)">Brazil (+55)</option>
+                    <option value="Mexico (+52)">Mexico (+52)</option>
+                    <option value="Russia (+7)">Russia (+7)</option>
+                    <option value="South Africa (+27)">South Africa (+27)</option>
+                    <option value="Argentina (+54)">Argentina (+54)</option>
+                    <option value="Nigeria (+234)">Nigeria (+234)</option>
+                    <option value="Egypt (+20)">Egypt (+20)</option>
+                    <option value="South Korea (+82)">South Korea (+82)</option>
+                    <option value="Singapore (+65)">Singapore (+65)</option>
+                    <option value="Philippines (+63)">Philippines (+63)</option>
+                    <option value="Thailand (+66)">Thailand (+66)</option>
+                    <option value="Netherlands (+31)">Netherlands (+31)</option>
+                    <option value="Sweden (+46)">Sweden (+46)</option>
+                    <option value="Finland (+358)">Finland (+358)</option>
+                    <option value="Norway (+47)">Norway (+47)</option>
+                    <option value="Denmark (+45)">Denmark (+45)</option>
+                    <option value="Poland (+48)">Poland (+48)</option>
+                    <option value="Greece (+30)">Greece (+30)</option>
+                    <option value="Turkey (+90)">Turkey (+90)</option>
+                    <option value="Saudi Arabia (+966)">Saudi Arabia (+966)</option>
+                    <option value="United Arab Emirates (+971)">United Arab Emirates (+971)</option>
+                    <option value="Malaysia (+60)">Malaysia (+60)</option>
+                    <option value="Indonesia (+62)">Indonesia (+62)</option>
+                    <option value="Vietnam (+84)">Vietnam (+84)</option>
+                    <option value="Pakistan (+92)">Pakistan (+92)</option>
+                    <option value="Bangladesh (+880)">Bangladesh (+880)</option>
+                    <option value="Cambodia (+855)">Cambodia (+855)</option>
+                    <option value="Sri Lanka (+94)">Sri Lanka (+94)</option>
+                    <option value="Kenya (+254)">Kenya (+254)</option>
+                    <option value="Uganda (+256)">Uganda (+256)</option>
+                    <option value="Ethiopia (+251)">Ethiopia (+251)</option>
+                    <option value="Tanzania (+255)">Tanzania (+255)</option>
+                    <option value="Malawi (+265)">Malawi (+265)</option>
+                    <option value="Zimbabwe (+263)">Zimbabwe (+263)</option>
+                    <option value="Peru (+51)">Peru (+51)</option>
+                    <option value="Chile (+56)">Chile (+56)</option>
+                    <option value="Colombia (+57)">Colombia (+57)</option>
+                    <option value="Venezuela (+58)">Venezuela (+58)</option>
+                    <option value="Cuba (+53)">Cuba (+53)</option>
+                    <option value="Ecuador (+593)">Ecuador (+593)</option>
+                    <option value="Paraguay (+595)">Paraguay (+595)</option>
+                    <option value="Bolivia (+591)">Bolivia (+591)</option>
+                    <option value="Suriname (+597)">Suriname (+597)</option>
+                    <option value="Guyana (+592)">Guyana (+592)</option>
                 </select>
             </div>
 
@@ -280,6 +327,9 @@
                 <select id="wheelchair-options" name="wheelchair" required></select>
             </div>
 
+            <!-- Security Deposit Fields -->
+
+
             <div class="form-section">
                 <label>Security Deposit:</label>
                 <div class="radio-group">
@@ -305,7 +355,7 @@
             </div>
 
             <div id="handed-over-fields" class="form-group hidden">
-                <label for="security-id">Security&Customer ID Number:</label>
+                <label for="security-id">Security & Customer ID Number:</label>
                 <input type="text" id="security-id" name="security-id">
             </div>
 
