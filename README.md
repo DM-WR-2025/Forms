@@ -307,6 +307,10 @@
                 <label for="phone">Phone Number:</label>
                 <input type="tel" id="phone" name="phone" required class="medium-input">
             </div>
+            <div class="form-group">
+                 <label for="email">Customer Email:</label>
+                 <input type="email" id="email" name="email" required class="medium-input">
+            </div>
 
             <!-- Desk Selection -->
             <div class="form-group">
@@ -329,19 +333,20 @@
             <!-- Security Deposit Fields -->
 
 
-            <div class="form-section">
-                <label>Security Deposit:</label>
-                <div class="radio-group">
-                    <input type="radio" id="id-license" name="deposit-type" value="id-license" onclick="toggleSecurityDepositOptions()" required>
-                    <label for="id-license">ID and License</label>
+           <div class="form-section">
+    <label>Security Deposit:</label>
+    <div class="radio-group">
+        <input type="radio" id="id-license" name="deposit-type" value="id-license" onclick="toggleSecurityDepositOptions()" required>
+        <label for="id-license">ID and License</label>
 
-                    <input type="radio" id="cash" name="deposit-type" value="cash" onclick="toggleSecurityDepositOptions()">
-                    <label for="cash">Cash</label>
+        <input type="radio" id="currency" name="deposit-type" value="cash" onclick="toggleSecurityDepositOptions()">
+        <label for="currency">Currency</label>
 
-                    <input type="radio" id="security" name="deposit-type" value="security" onclick="toggleSecurityDepositOptions()">
-                    <label for="security">Handed over to Security</label>
-                </div>
-            </div>
+        <input type="radio" id="security" name="deposit-type" value="security" onclick="toggleSecurityDepositOptions()">
+        <label for="security">Handed over to Security</label>
+    </div>
+</div>
+
 
             <div id="id-fields" class="form-group hidden">
                 <label for="id-number">ID Number:</label>
