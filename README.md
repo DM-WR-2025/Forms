@@ -231,7 +231,7 @@
 <body>
     <div class="container">
         <h2>DM Wheelchair Registration Form</h2>
-        <form action="https://script.google.com/macros/s/AKfycbxnPftPwSE9lp1wo9Gmj_YSlEDVtnt60SmkWyomki-olJfxDUCbsYe15-UPdbWcvty0LQ/exec" method="POST" enctype="multipart/form-data" onsubmit="return confirmSubmission()">
+        <form action="https://script.google.com/macros/s/AKfycbzd_f31UDPo3AmaSlIT1QN0Tb9FwFNBaIPhsWY3BuMIBhV5oe5JR0PL_gPAhDVFuWXTsQ/exec" method="POST" enctype="multipart/form-data" onsubmit="return confirmSubmission()">
            
             <!-- Customer Name First -->
             <div class="form-group">
