@@ -512,7 +512,13 @@
   <label for="currency-type" class="currency-label">Currency:</label>
   <select id="currency-type" name="currency-type" class="currency-select">
     <option value="usd">USD (Dollar)</option>
-    <option value="gcc">GCC</option>
+    <option value="aed">AED (Dirham)</option>
+    <option value="sar">SAR (Riyal)</option>
+    <option value="bhd">BHD (Dinar)</option>
+    <option value="kwd">KWD (Dinar)</option>
+    <option value="omr">OMR (Rial)</option>
+    <option value="qat">QAR (Riyal)</option>
+    <option value="jod">JOD (Jordanian Dinar)</option>
     <option value="eur">EUR (Euro)</option>
     <option value="other">Other</option>
   </select>
