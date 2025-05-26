@@ -230,6 +230,8 @@
 </head>
 <body>
     <div class="container">
+        <img src="dm-logo.png" alt="DM Logo" class="logo" />
+
         <h2>DM Wheelchair Registration Form</h2>
         <form action="https://script.google.com/macros/s/AKfycbzpej4RnNz5gLMdHGG-Wn9yMNaXiVw3JX-2W1nX6zlgwMBbNIyzUiXC8G7rQ_f6hy4R/exec" method="POST" enctype="multipart/form-data" onsubmit="return confirmSubmission()">
            
