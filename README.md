@@ -185,8 +185,6 @@
     </style>
     <script>
 
-<img src="https://github.com/DM-WR-2025/Forms/blob/7d29aa5ee3f9a62d44f25957b864c8673632e0a9/DUBAI%20HOLDING%20LOGO.png" alt="Your Logo" width="150">
-
         function showWheelchairOptions() {
             var desk = document.getElementById("desk").value;
             var wheelchairSelect = document.getElementById("wheelchair-options");
@@ -233,6 +231,7 @@
 </head>
 <body>
     <div class="container">
+        <img src="https://github.com/DM-WR-2025/Forms/blob/7d29aa5ee3f9a62d44f25957b864c8673632e0a9/DUBAI%20HOLDING%20LOGO.png" alt="Your Logo" width="150">
          <img src="https://github.com/DM-WR-2025/Forms/raw/416a4e06e8f80b074a18ab18543fd37267c1a755/dm%20-logo.png" alt="Your Logo" width="150">
 
         <h2>DM Wheelchair Registration Form</h2>
