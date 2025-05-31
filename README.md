@@ -183,11 +183,10 @@
             }
         }
     </style>
-    <script>
     <img src="https://raw.githubusercontent.com/DM-WR-2025/Forms/7cd17541d8543bfde85b3e7764af67a29af1e12c/DUBAI%20HOLDING%20LOGO.png" alt="Dubai Holding Logo" width="150">
+    <script>
     <h2>Your Form Title</h2>
-
-        function showWheelchairOptions() {
+ function showWheelchairOptions() {
             var desk = document.getElementById("desk").value;
             var wheelchairSelect = document.getElementById("wheelchair-options");
             wheelchairSelect.innerHTML = ""; // Clear current options
