@@ -184,6 +184,9 @@
         }
     </style>
     <script>
+
+<img src="https://github.com/DM-WR-2025/Forms/blob/7d29aa5ee3f9a62d44f25957b864c8673632e0a9/DUBAI%20HOLDING%20LOGO.png" alt="Your Logo" width="150">
+
         function showWheelchairOptions() {
             var desk = document.getElementById("desk").value;
             var wheelchairSelect = document.getElementById("wheelchair-options");
